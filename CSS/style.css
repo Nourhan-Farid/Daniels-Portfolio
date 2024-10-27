@@ -1,0 +1,1163 @@
+/* Made by Nourhan Farid Abo Baker */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* General Classes */
+/* --------------- */
+
+.black-text-color {
+    color: #1C1C1C;
+}
+
+.grey-bg {
+    background-color: #5A5A5A;
+}
+
+/* --------------- */
+
+/* ---------------------------------------------------- Start of Header ---------------------------------------------------------- */
+.navbar {
+    padding: 10px 100px;
+    height: 90px !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent !important;
+    position: absolute !important;
+    z-index: 555;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+    color: white;
+}
+
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    align-items: center;
+    bottom: 0px;
+    left: 15px;
+    width: 0% !important;
+    height: 3px;
+    background-color: white;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+    width: 65% !important;
+}
+
+.navbar-nav .nav-item .active::before {
+    width: 65% !important;
+}
+
+.navbar-toggler {
+    vertical-align: middle;
+    padding: 0;
+    color: white !important;
+}
+
+.navbar-toggler i {
+    font-size: 40px;
+    color: white !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-link,
+.active {
+    color: white !important;
+}
+
+.navBar-scroll {
+    display: flex;
+    overflow: hidden;
+    background: #fff;
+    -webkit-box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+    min-height: 60px !important;
+    line-height: 60px;
+    padding: 0 !important;
+    position: fixed;
+    vertical-align: middle !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5555;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.navBar-scroll .navbar-brand {
+    padding: 2px 0 2px 100px !important;
+    color: #1c1c1c;
+}
+
+.navBar-scroll .navbar-nav {
+    margin-right: 100px;
+}
+
+.navBar-scroll .navbar-nav li a {
+    color: #000 !important;
+
+}
+
+.navBar-scroll .navbar-nav li a::before {
+    content: "";
+    position: absolute;
+    align-items: center;
+    bottom: 20px !important;
+    left: 15px;
+    width: 0% !important;
+    height: 3px;
+    /* color: #000; */
+    background-color: black !important;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.navBar-scroll .navbar-nav li a:hover::before {
+    width: 65% !important;
+}
+
+.navBar-scroll .navbar-nav li .active::before {
+    width: 65% !important;
+}
+
+.navBar-scroll .navbar-toggler {
+    margin-left: auto;
+    vertical-align: middle;
+    margin-top: 10px;
+    position: absolute;
+    right: 100px !important;
+}
+
+.navBar-scroll .navbar-toggler i {
+    padding: 0;
+    color: rgb(94, 92, 92) !important;
+}
+
+@media screen and (max-width:992px) {
+
+    #navbarSupportedContent {
+        background-color: rgb(255, 255, 255) !important;
+        margin: 20px 0 !important;
+        padding: 10px 0;
+    }
+
+    #navbarSupportedContent ul #nav-item .nav-link {
+        color: #000 !important;
+        text-align: center;
+        margin: 0 auto !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-nav .nav-item .nav-link::before {
+        content: "";
+        position: absolute;
+        align-items: center;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0% !important;
+        height: 3px;
+        background-color: rgb(0, 0, 0);
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+
+    .navbar-nav .nav-item .nav-link:hover::before {
+        width: 10% !important;
+    }
+
+    /* .navbar-nav .nav-item .active::before {
+        width: 10% !important;
+    }*/
+
+    .navBar-scroll .navbar-nav .nav-item .active::before {
+        width: 0% !important;
+    }
+
+    .navBar-scroll .navbar-nav .nav-item .active:hover::before {
+        width: 10% !important;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    .navbar-brand {
+        padding: 0 !important;
+    }
+
+    #navbarSupportedContent {
+        background-color: rgb(255, 255, 255) !important;
+        margin: 20px 0 !important;
+        padding: 10px 0;
+    }
+
+    #navbarSupportedContent ul #nav-item .nav-link {
+        color: #000 !important;
+        text-align: center !important;
+        margin: 0 !important;
+        display: flex;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .navbar-nav .nav-item .nav-link::before {
+        content: "";
+        position: absolute;
+        align-items: center;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0% !important;
+        height: 3px;
+        background-color: rgb(0, 0, 0);
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+
+    .navbar-nav .nav-item .nav-link:hover::before {
+        width: 40% !important;
+    }
+
+    .navBar-scroll .navbar-nav .nav-item .active::before {
+        width: 0% !important;
+    }
+
+    .navBar-scroll .navbar-nav .nav-item .active:hover::before {
+        width: 40% !important;
+    }
+}
+
+/* ---------------------------------------------------- End of Header ---------------------------------------------------------- */
+
+/* ---------------------------------------------------- Start of Home ---------------------------------------------------------- */
+.Home {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/bg.jpg);
+    background-position: top top;
+    background-size: cover;
+
+}
+
+.Home h5 {
+    font-size: 53px;
+    line-height: 32px;
+    font-weight: 800;
+}
+
+.Home h1 {
+    font-size: 65px;
+    line-height: 90px;
+    font-weight: 200;
+}
+
+@media screen and (max-width:1200px) {
+    .Home h1 {
+        font-size: 58px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .Home h1 {
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .Home h1 {
+        font-size: 45px;
+    }
+}
+
+.Home h1::after {
+    font-weight: 400;
+    content: "";
+    animation: animatedHome;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes animatedHome {
+    0% {
+        content: "|";
+    }
+
+    1% {
+        content: "L|";
+    }
+
+    4% {
+        content: "La|";
+    }
+
+    5% {
+        content: "Lar|";
+    }
+
+    6% {
+        content: "Larr|";
+    }
+
+    7% {
+        content: "Larry|";
+    }
+
+    9% {
+        content: "Larry D|";
+    }
+
+    11% {
+        content: "Larry Da|";
+    }
+
+    13% {
+        content: "Larry Dan|";
+    }
+
+    15% {
+        content: "Larry Dani|";
+    }
+
+    17% {
+        content: "Larry Danie|";
+    }
+
+    20% {
+        content: "Larry Daniel|";
+    }
+
+    22% {
+        content: "Larry Daniels|";
+    }
+
+    25% {
+        content: "Larry Daniel|";
+    }
+
+    28% {
+        content: "Larry Danie|";
+    }
+
+    30% {
+        content: "Larry Dani|";
+    }
+
+    32% {
+        content: "Larry Dan|";
+    }
+
+    34% {
+        content: "Larry Da|";
+    }
+
+    36% {
+        content: "Larry D|";
+    }
+
+    38% {
+        content: "Larry|";
+    }
+
+    40% {
+        content: "Larr|";
+    }
+
+    42% {
+        content: "Lar|";
+    }
+
+    44% {
+        content: "La|";
+    }
+
+    46% {
+        content: "L|";
+    }
+
+    48% {
+        content: "|";
+    }
+
+    50% {
+        content: "D|";
+    }
+
+    52% {
+        content: "De|";
+    }
+
+    54% {
+        content: "Dev|";
+    }
+
+    56% {
+        content: "Deve|";
+    }
+
+    58% {
+        content: "Devel|";
+    }
+
+    60% {
+        content: "Develo|";
+    }
+
+    61% {
+        content: "Develop|";
+    }
+
+    63% {
+        content: "Develope|";
+    }
+
+    65% {
+        content: "Developer|";
+    }
+
+    68% {
+        content: "Develope|";
+    }
+
+    70% {
+        content: "Develop|";
+    }
+
+    71% {
+        content: "Develo|";
+    }
+
+    72% {
+        content: "Devel|";
+    }
+
+    73% {
+        content: "Deve|";
+    }
+
+    74% {
+        content: "Dev|";
+    }
+
+    77% {
+        content: "De|";
+    }
+
+    79% {
+        content: "D|";
+    }
+
+    80% {
+        content: "|";
+    }
+
+    83% {
+        content: "D|";
+    }
+
+    85% {
+        content: "De|";
+    }
+
+    87% {
+        content: "Des|";
+    }
+
+    88% {
+        content: "Desi|";
+    }
+
+    89% {
+        content: "Desig|";
+    }
+
+    90% {
+        content: "Design|";
+    }
+
+    91% {
+        content: "Designe|";
+    }
+
+    92% {
+        content: "Designer|";
+    }
+
+    93% {
+        content: "Designe|";
+    }
+
+    94% {
+        content: "Design|";
+    }
+
+    95% {
+        content: "Desig|";
+    }
+
+    96% {
+        content: "Desi|";
+    }
+
+    97% {
+        content: "Des|";
+    }
+
+    98% {
+        content: "De|";
+    }
+
+    99% {
+        content: "D|";
+    }
+
+    100% {
+        content: "|";
+    }
+
+
+}
+
+.Home ul li {
+    background-color: rgba(0, 0, 0, 0.316);
+    width: 40px;
+    height: 40px;
+}
+
+.Home ul li:hover {
+    opacity: 0.7;
+}
+
+.Home ul li a i {
+    font-size: 14px;
+}
+
+/* ----------------------------------------------------- End of Home ----------------------------------------------------------- */
+/* scrollTop */
+.scrollTop {
+    cursor: pointer;
+    background-color: #000;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    right: 10px;
+    bottom: 10px;
+    position: fixed;
+    transition-duration: 250ms;
+    color: #F5F5F5;
+    z-index: 100000;
+}
+
+.scrollTop:hover {
+    background-color: #070707;
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+
+
+/* scrollTop */
+/* ----------------------------------------------------- Start of About ----------------------------------------------------------- */
+
+.about .about-img {
+    position: relative;
+}
+
+.about .about-img:after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: -31px;
+    bottom: -34px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.about-content h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #343434;
+}
+
+.about-content span {
+    letter-spacing: 1px;
+    margin: 5px 0 20px;
+}
+
+.progress {
+    height: 30px;
+    background: #f7f7f7;
+    -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    position: relative;
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 20px 15px;
+    background-color: #1C1C1C;
+}
+
+.Btn-Group .Btn1,
+.Btn-Group .Btn2 {
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.Btn1 {
+    background-color: black;
+}
+
+.Btn1 a {
+    color: white;
+}
+
+
+.Btn1:hover {
+    background-color: white !important;
+}
+
+.Btn1:hover a {
+    color: #1C1C1C;
+}
+
+.Btn2 {
+    background-color: white !important;
+}
+
+.Btn2 a {
+    color: black;
+}
+
+.Btn2:hover a {
+    color: white;
+}
+
+.Btn2:hover {
+    background-color: black !important;
+}
+
+@media screen and (max-width:576px) {
+    .col-lg-7 {
+        margin-top: 30px !important;
+    }
+}
+
+/* ----------------------------------------------------- End of About ----------------------------------------------------------- */
+
+/* ----------------------------------------------------- Start of Services ----------------------------------------------------------- */
+
+.Services {
+    background-color: #f4f4f4;
+    overflow: auto;
+}
+
+.Services .container {
+    width: 80%;
+}
+
+.services-header h2,
+.portfolio-header h2,
+.carousel-header h2,
+.team-header h2,
+.contact-header h2 {
+    position: relative;
+    font-size: 50px;
+    line-height: 58px;
+    display: inline-block;
+    color: #343434;
+    z-index: 7 !important;
+    /* background-color: black; */
+}
+
+.services-header h2::after,
+.portfolio-header h2::after,
+.carousel-header h2::after,
+.team-header h2::after,
+.contact-header h2::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1 !important;
+}
+
+.service-card {
+    background-color: white;
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover .service-icon {
+    background-color: #1C1C1C;
+}
+
+.service-card:hover .service-icon i {
+    color: white;
+}
+
+.service-icon {
+    transition: all 0.5s;
+    width: 80px;
+    height: 80px;
+    background-color: #f4f4f4;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.service-icon i {
+    font-size: 30px;
+}
+
+.service-content p {
+    font-size: 15px;
+    line-height: 1.5em;
+    max-width: 400px;
+}
+
+/* ----------------------------------------------------- End of Services ----------------------------------------------------------- */
+
+/* ----------------------------------------------------- Start of Portfolio ----------------------------------------------------------- */
+
+.nav-underline .navFolio-item .navFolio-link {
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    color: #1C1C1C !important;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.nav-underline .navFolio-item .navFolio-link::before {
+    content: "";
+    position: absolute;
+    align-items: center;
+    bottom: -10px !important;
+    left: 0;
+    width: 0% !important;
+    height: 3px;
+    background-color: black !important;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.nav-underline .navFolio-item .navFolio-link:hover::before {
+    width: 100% !important;
+}
+
+.nav-underline .navFolio-item .active::before {
+    width: 100% !important;
+}
+
+.layer {
+    position: absolute;
+    inset: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 2;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.portfolio-overlay h6 {
+    transition: all 0.5s;
+    transform: translateY(-7px);
+    letter-spacing: 1px;
+    font-size: 13px !important;
+    -webkit-transform: translateY(-7px);
+    -moz-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    -o-transform: translateY(-7px);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.portfolio-card:hover h6 {
+    transform: translateY(7px);
+    -webkit-transform: translateY(7px);
+    -moz-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    -o-transform: translateY(7px);
+}
+
+.portfolio-overlay {
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+}
+
+.portfolio-card:hover .layer {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-card .portfolio-img img {
+    transition: all 0.3s;
+}
+
+.overlay-item a {
+    border-radius: 50%;
+    padding: 5px 9px;
+    width: 40px !important;
+    height: 40px;
+    color: black;
+    background-color: black;
+    border: 2px solid black;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.overlay-item a i {
+    font-size: 15px;
+    color: white;
+}
+
+.overlay-item a:hover {
+    background-color: white;
+    border: 1px solid black !important;
+}
+
+.overlay-item a:hover i {
+    color: black !important;
+}
+
+.navFolio-pills .navFolio-link {
+    color: black;
+}
+
+/* ----------------------------------------------------- End of Portfolio ----------------------------------------------------------- */
+
+/* ----------------------------------------------------- Start of carousel ----------------------------------------------------------- */
+
+.carousel {
+    background-color: #f4f4f4;
+}
+
+.carousel-card img {
+    width: 100px;
+}
+
+.carousel-card p {
+    font-size: 16px;
+    line-height: 29px;
+    margin: 10px auto;
+    word-spacing: 2px;
+}
+
+.carousel-card span {
+    font-size: 13px;
+    line-height: 0px;
+}
+
+.carousel-indicators {
+    bottom: -80px;
+
+}
+
+.carousel-indicators [data-bs-target] {
+    margin-right: 10px;
+    background-color: #869791;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.carousel-indicators [data-bs-target]:hover {
+    background-color: rgb(75, 111, 112);
+}
+
+@media screen and (max-width:576px) {
+
+    .carousel-card,
+    .carousel-card p {
+        padding: 0 !important;
+    }
+}
+
+/* ----------------------------------------------------- End of carousel ----------------------------------------------------------- */
+
+/* ---------------------------------------------------- Start of Mini-Section ---------------------------------------------------------- */
+
+.mini-sec-div i {
+    padding: 10px 0;
+    font-size: 35px;
+    color: #000;
+}
+
+/* ---------------------------------------------------- End of Mini-Section ---------------------------------------------------------- */
+
+/* ---------------------------------------------------- Start of Team ---------------------------------------------------------- */
+
+.team {
+    background-color: #f4f4f4;
+}
+
+.team-card .team-img {
+    overflow: hidden;
+}
+
+.team-card .team-img img {
+    width: 100%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+
+.team-card:hover img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.team-card:hover .layOver {
+    transform: rotateY(180deg);
+    inset: 5px;
+    opacity: 1;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.layOver {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    inset: 50px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 2;
+
+}
+
+.overlay-item a {
+    margin: 0 5px !important;
+    padding: 7px 10px !important;
+
+}
+
+.overlay-item a i {
+    font-size: 15px;
+}
+
+.overlay-icons ul {
+    width: 100%;
+    text-align: center;
+    align-items: center !important;
+}
+
+@media screen and (max-width:1600px) and (min-width:992px) {
+    .team .container {
+        width: 78% !important;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .team .container {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .team .container {
+        width: 100% !important;
+    }
+}
+
+/* ---------------------------------------------------- End of Team ---------------------------------------------------------- */
+
+/* ---------------------------------------------------- Start of Contact ---------------------------------------------------------- */
+
+.contact .container {
+    width: 75%;
+    margin: 0 auto !important;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-card:hover .contact-icon {
+    background-color: #1C1C1C;
+}
+
+.contact-icon i {
+    color: #1C1C1C;
+
+}
+
+.contact-card:hover i {
+    color: white;
+}
+
+.form-control {
+    background-color: #f4f4f4;
+    border: none;
+}
+
+.form-control:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: #f4f4f4;
+}
+
+.form-control::placeholder {
+    color: #7d7c7c;
+    font-size: 15px;
+}
+
+.form-control[type=text],
+.form-control[type=email],
+textarea {
+    padding-left: 20px;
+    padding-top: 7px;
+}
+
+textarea {
+    height: 150px;
+}
+
+@media screen and (max-width:992px) {
+    .contact .container {
+        width: 100% !important;
+    }
+
+    .inputs {
+        width: 100% !important;
+        display: block !important;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .contact .container {
+        width: 100% !important;
+    }
+
+    .inputs {
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .inputs input {
+        margin-top: 20px !important;
+    }
+}
+
+/* ---------------------------------------------------- End of Contact ---------------------------------------------------------- */
+
+/* ---------------------------------------------------- Start of footer ---------------------------------------------------------- */
+
+footer {
+    background-color: #1C1C1C;
+}
+
+footer p {
+    font-size: 13px;
+    color: #748182;
+    word-spacing: 2px;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------- End of footer ---------------------------------------------------------- */
