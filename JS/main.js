@@ -1,5 +1,9 @@
 let scrollsTop = document.querySelector(".scrollTop");
-
+let navbarNav = document.querySelector(".navbar-nav");
+let navbarToggler = document.querySelector(".navbar-toggler");
+let navItems = document.querySelectorAll(".nav-item");
+let blackBurger = document.getElementById("blackBurger");
+let whiteBurger = document.getElementById("whiteBurger");
 // OnScroll Navbar----Start
 window.onscroll = function () {
   myFunction();
@@ -8,9 +12,12 @@ window.onscroll = function () {
 function myFunction() {
   if (document.documentElement.scrollTop > 100) {
     document.getElementById("scroll").className = "navBar-scroll";
-    // document.getElementById("scroll").className = "slideUp";
+    blackBurger.classList.replace("d-none", "d-flex");
+    whiteBurger.classList.replace("d-flex", "d-none");
   } else {
     document.getElementById("scroll").className = "navbar";
+    whiteBurger.classList.replace("d-none", "d-flex");
+    blackBurger.classList.replace("d-flex", "d-none");
   }
 }
 

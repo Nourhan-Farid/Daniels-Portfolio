@@ -25,36 +25,55 @@
     <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" class="scrollspy-example"
         tabindex="0">
         <!---------------------------------------------------- Start of Header ---------------------------------------------------------->
-        <nav class="navbar navbar-expand-lg w-100 pe-5 bg-transparent" id="nav">
-            <div class="container px-5" id="scroll">
-                <a href=" #" class="navbar-brand ps-3 fw-bold ">DANIELS</a>
+        <nav class="navbar navbar-expand-lg w-100 bg-transparent" id="nav">
+            <div class="container" id="scroll">
+                <a href=" #" class="navbar-brand ps-0 fw-bold ">DANIELS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="bi bi-list fw-bold"></i>
+                    <!-- From Uiverse.io by JulanDeAlb -->
+                    <label class="hamburger d-flex" id="whiteBurger">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 32 32" stroke="white">
+                            <path class="line line-top-bottom"
+                                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                            </path>
+                            <path class="line" d="M7 16 27 16"></path>
+                        </svg>
+                    </label>
+                    <!-- From Uiverse.io by talhabangyal -->
+                    <label class="hamburger d-none" id="blackBurger">
+                        <input type="checkbox" />
+                        <svg viewBox="0 0 32 32" stroke="black">
+                            <path class="line line-top-bottom"
+                                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                            </path>
+                            <path class="line" d="M7 16 27 16"></path>
+                        </svg>
+                    </label>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                        <li class="nav-item" id="nav-item">
-                            <a class="nav-link px-3 active" aria-current="page" href="#HOME">Home</a>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" id="navItemH">
+                            <a class="nav-link active" aria-current="page" href="#HOME">Home</a>
                         </li>
-                        <li class="nav-item" id="nav-item">
-                            <a class="nav-link px-3" href="#ABOUT">About</a>
+                        <li class="nav-item" id="navItemA">
+                            <a class="nav-link " href="#ABOUT">About</a>
                         </li>
-                        <li class="nav-item" id="nav-item">
-                            <a class="nav-link px-3" href="#SERVICES">Services</a>
+                        <li class="nav-item" id="navItemS">
+                            <a class="nav-link " href="#SERVICES">Services</a>
                         </li>
-                        <li class="nav-item" id="nav-item">
-                            <a class="nav-link px-3" href="#WORKS">Works</a>
+                        <li class="nav-item" id="navItemW">
+                            <a class="nav-link " href="#WORKS">Works</a>
                         </li>
-                        <li class="nav-item" id="nav-item">
-                            <a class="nav-link px-3" href="#CLIENTS">Clients</a>
+                        <li class="nav-item" id="navItemC">
+                            <a class="nav-link " href="#CLIENTS">Clients</a>
                         </li>
-                        <li class="nav-item" id="nav-item">
-                            <a class="nav-link px-3" href="#TEAM">Team</a>
+                        <li class="nav-item" id="navItemT">
+                            <a class="nav-link " href="#TEAM">Team</a>
                         </li>
-                        <li class="nav-item" id="nav-item">
-                            <a class="nav-link px-3" href="#CONTACT">Contact</a>
+                        <li class="nav-item" id="navItemAC">
+                            <a class="nav-link " href="#CONTACT">Contact</a>
                         </li>
 
                     </ul>
@@ -1060,7 +1079,7 @@
                 <div class="row text-center text-white pt-2 pb-1">
                     <p class="text-white fw-light pt-2">Copy Right 2018 © By Daniels All Rights Reserved</p>
                     <p class="text-white">Made by <a href="https://www.linkedin.com/in/nourhan-farid-4b200828b"
-                            class="text-white text-decoration-none fw-bold">Nourhan Farid</a> </p>
+                            target="_blank" class="text-white text-decoration-none fw-bold">Nourhan Farid</a> </p>
                 </div>
             </div>
         </footer>

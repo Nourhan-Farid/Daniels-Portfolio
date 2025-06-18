@@ -34,7 +34,7 @@ h6 {
 
 /* ---------------------------------------------------- Start of Header ---------------------------------------------------------- */
 .navbar {
-    padding: 10px 100px;
+    padding: 10px 35px !important;
     height: 90px !important;
     top: 0;
     left: 0;
@@ -64,7 +64,7 @@ h6 {
     position: absolute;
     align-items: center;
     bottom: 0px;
-    left: 15px;
+    left: 9px;
     width: 0% !important;
     height: 3px;
     background-color: white;
@@ -76,23 +76,19 @@ h6 {
 }
 
 .navbar-nav .nav-item .nav-link:hover::before {
-    width: 65% !important;
+    width: 75% !important;
 }
 
 .navbar-nav .nav-item .active::before {
-    width: 65% !important;
+    width: 75% !important;
 }
 
 .navbar-toggler {
     vertical-align: middle;
     padding: 0;
-    color: white !important;
+    background-color: transparent !important;
 }
 
-.navbar-toggler i {
-    font-size: 40px;
-    color: white !important;
-}
 
 .navbar-toggler:focus {
     box-shadow: none;
@@ -111,7 +107,7 @@ h6 {
     box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
     min-height: 60px !important;
     line-height: 60px;
-    padding: 0 !important;
+    padding-right: 20px !important;
     position: fixed;
     vertical-align: middle !important;
     top: 0;
@@ -121,16 +117,20 @@ h6 {
     z-index: 5555;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+    border-bottom: 2px solid black;
 }
 
 .navBar-scroll .navbar-brand {
-    padding: 2px 0 2px 100px !important;
+    padding: 2px 0 2px 35px !important;
     color: #1c1c1c;
 }
 
-.navBar-scroll .navbar-nav {
-    margin-right: 100px;
+.navBar-scroll #navbarSupportedContent {
+    padding: 0 20px 0 0 !important;
+    color: #1c1c1c;
 }
+
+
 
 .navBar-scroll .navbar-nav li a {
     color: #000 !important;
@@ -145,7 +145,6 @@ h6 {
     left: 15px;
     width: 0% !important;
     height: 3px;
-    /* color: #000; */
     background-color: black !important;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -155,19 +154,19 @@ h6 {
 }
 
 .navBar-scroll .navbar-nav li a:hover::before {
-    width: 65% !important;
+    width: 75% !important;
 }
 
 .navBar-scroll .navbar-nav li .active::before {
-    width: 65% !important;
+    width: 75% !important;
 }
 
 .navBar-scroll .navbar-toggler {
     margin-left: auto;
     vertical-align: middle;
-    margin-top: 10px;
+    margin-top: 15px;
     position: absolute;
-    right: 100px !important;
+    right: 35px !important;
 }
 
 .navBar-scroll .navbar-toggler i {
@@ -175,20 +174,89 @@ h6 {
     color: rgb(94, 92, 92) !important;
 }
 
+
+/* From Uiverse.io by talhabangyal */
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition:
+        stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+
 @media screen and (max-width:992px) {
 
     #navbarSupportedContent {
-        background-color: rgb(255, 255, 255) !important;
-        margin: 20px 0 !important;
-        padding: 10px 0;
+        background-color: transparent !important;
+        border-radius: 10px !important;
+        -webkit-border-radius: 10px !important;
+        -moz-border-radius: 10px !important;
+        -ms-border-radius: 10px !important;
+        -o-border-radius: 10px !important;
     }
 
-    #navbarSupportedContent ul #nav-item .nav-link {
+    .navBar-scroll #navbarSupportedContent {
+        margin-right: 100px !important;
+        margin-top: 50px !important;
+    }
+
+    .navBar-scroll #navbarSupportedContent .navbar-nav {
+        margin: 0 10px !important;
+        width: 100% !important;
+    }
+
+    #navbarSupportedContent ul .nav-item .nav-link {
         color: #000 !important;
         text-align: center;
-        margin: 0 auto !important;
+        margin: 1px auto !important;
         display: flex;
         justify-content: center;
+        background-color: rgb(255, 255, 255) !important;
+    }
+
+    #navItemH .nav-link {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+
+    #navItemAC .nav-link {
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
     }
 
     .navbar-nav .nav-item .nav-link::before {
@@ -216,9 +284,14 @@ h6 {
         width: 10% !important;
     }
 
-    /* .navbar-nav .nav-item .active::before {
-        width: 10% !important;
-    }*/
+    .navbar-nav li a::before {
+        bottom: 5px !important;
+    }
+
+    .navBar-scroll .navbar-nav li a::before {
+        bottom: 10px !important;
+
+    }
 
     .navBar-scroll .navbar-nav .nav-item .active::before {
         width: 0% !important;
@@ -226,6 +299,38 @@ h6 {
 
     .navBar-scroll .navbar-nav .nav-item .active:hover::before {
         width: 10% !important;
+    }
+
+    .navBar-scroll .navbar-nav .nav-item,
+    .navBar-scroll .navbar-nav .nav-item .nav-link {
+        padding: 0px !important;
+        width: 100% !important;
+
+    }
+
+    .navBar-scroll .navbar-nav #navItemH a,
+    .navBar-scroll .navbar-nav #navItemA a,
+    .navBar-scroll .navbar-nav #navItemW a,
+    .navBar-scroll .navbar-nav #navItemT a,
+    .navBar-scroll .navbar-nav #navItemS a,
+    .navBar-scroll .navbar-nav #navItemAC a,
+    .navBar-scroll .navbar-nav #navItemC a {
+        padding: 0 !important;
+        margin: 1px 0 !important;
+    }
+
+    #navItemH {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+
+    #navItemAC {
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+    }
+
+    .hide {
+        display: none !important;
     }
 }
 
@@ -237,17 +342,30 @@ h6 {
 
     #navbarSupportedContent {
         background-color: rgb(255, 255, 255) !important;
-        margin: 20px 0 !important;
+        margin-top: 10px !important;
         padding: 10px 0;
+        width: 100% !important;
     }
 
-    #navbarSupportedContent ul #nav-item .nav-link {
+    #navbarSupportedContent ul .nav-item .nav-link {
         color: #000 !important;
         text-align: center !important;
         margin: 0 !important;
         display: flex;
         align-items: center !important;
         justify-content: center !important;
+    }
+
+    .navBar-scroll .navbar-nav .nav-item {
+        margin: 0 auto !important;
+        width: 100%;
+        padding: 0px !important;
+        right: -50% !important;
+    }
+
+    .navBar-scroll .navbar-nav .nav-item .nav-link {
+        /* left: -30% !important; */
+        padding: 0px !important;
     }
 
     .navbar-nav .nav-item .nav-link::before {
@@ -272,7 +390,7 @@ h6 {
     }
 
     .navbar-nav .nav-item .nav-link:hover::before {
-        width: 40% !important;
+        width: 30% !important;
     }
 
     .navBar-scroll .navbar-nav .nav-item .active::before {
@@ -282,7 +400,13 @@ h6 {
     .navBar-scroll .navbar-nav .nav-item .active:hover::before {
         width: 40% !important;
     }
+
+    .hide {
+        display: none !important;
+    }
 }
+
+
 
 /* ---------------------------------------------------- End of Header ---------------------------------------------------------- */
 
